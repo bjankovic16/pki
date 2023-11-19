@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Island Moments">
+</head>
+<body>
+    <form (ngSubmit)="login()" ngNativeValidate autocomplete="off">
+        <div class="center">
+            <div class="container">
+                <p>Korisničko ime:</p><input type="text" name="korisnickoIme" class="text" [(ngModel)]="korisnickoIme" required>
+            </div>
+            <div class="container">
+                <p>Lozinka:</p><input type="text" name="lozinka" class="text2" [(ngModel)]="lozinka" required>
+            </div>
+        </div>
+        <div class="center-one">
+            <button type="submit" value="Potvrda">Potvrda</button>
+        </div>
+        <br/>
+        <div class="center-one">
+            <a routerLink="registration" class="link">Nemate nalog kliknite ovde...</a>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,38 @@
+.links{
+    text-align: right; /* Align text to the right within the container */
+}
+
+body {
+    background-image: url('../../assets/background.jpg');
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.link{
+    text-decoration: none;
+    margin-right: 50px;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+}
+
+h1{
+    color: #FFF;
+    text-align: center;
+    margin-top: 300px;
+    font-family: Island Moments;
+    font-size: 130px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+}
