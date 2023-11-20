@@ -1,0 +1,47 @@
+body {
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+}
+
+p{
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+    font-family: Island Moments;
+    font-size: 100px;
+    height: 50px;
+}
+
+.container {
+    max-width: 1400px; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    max-height: 800px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px;
+}
+
+.col-md-4 {
+    flex: 0 0 calc(33.333% - 30px);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 350px;
+    height: 350px;
+}
