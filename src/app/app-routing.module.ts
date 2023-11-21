@@ -6,6 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { InfoComponent } from './info/info.component';
 import { KolaciComponent } from './kolaci/kolaci.component';
+import { OdabraniSlatkisComponent } from './odabrani-slatkis/odabrani-slatkis.component';
+import { KomentariComponent } from './komentari/komentari.component';
+import { PorudzbineComponent } from './porudzbine/porudzbine.component';
 
 const routes: Routes = [
   {path:"", component:IndexComponent},
@@ -15,6 +18,9 @@ const routes: Routes = [
   {path:"main", component:MainPageComponent},
   {path:"main/about", component:InfoComponent},
   {path:"main/kolaci", component:KolaciComponent},
+  {path:"main/kolaci/odabraniSlatkis", component:OdabraniSlatkisComponent},
+  {path:"main/kolaci/odabraniSlatkis/komentari", component:KomentariComponent},
+  {path:"main/orders", component:PorudzbineComponent},
 ];
 
 @NgModule({

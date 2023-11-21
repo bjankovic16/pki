@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Island Moments">
+</head>
+<body>
+    <div>
+        <p>Slatki zalogaj</p>
+    </div>
+    <div class="container">
+        <div class="side-by-side1">
+            <img src="{{odabraniSlatkis.slika}}">
+        </div>
+        <div class="side-by-side2">
+            <div class="inside2">
+                <div class="styled-text">
+                    Opis:
+                </div>
+                <div class="styled-text">
+                    {{odabraniSlatkis.opis}}
+                </div>
+                <br/>
+                <div class="styled-text">
+                    Sastojci:
+                </div>
+                <div class="styled-text">
+                    {{odabraniSlatkis.sastojci}}
+                </div>
+                <br/>
+                <div class="styled-text">
+                    Cena: {{odabraniSlatkis.cena}} din
+                </div>
+            </div>
+            <div class="buttons2">
+                <button (click)="komentarisi()"> Komentari </button> <&nbsp;>
+                <button (click)="naruci()"> Naruči </button>
+            </div>
+        </div>
+    </div>
+</body>

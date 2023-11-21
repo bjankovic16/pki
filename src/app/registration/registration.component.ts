@@ -7,7 +7,7 @@ import { Korisnik } from '../models/korisnik';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  
+
   ime:string;
   prezime:string;
   adresa:string;
@@ -29,6 +29,5 @@ export class RegistrationComponent {
     k.lozinka=this.lozinka;
     korisnici.push(k);
     localStorage.setItem("korisnici",JSON.stringify(korisnici));
-    console.log("upis")
   }
 }

@@ -6,21 +6,17 @@
         <p>Slatki zalogaj</p>
     </div>
     <div class="container">
-        <div *ngFor="let row of paginatedImages" class="row">
-          <div *ngFor="let image of images" class="col-md-4">
-            <div class="card">
-              <img [src]="image" class="card-img-top">
-            </div>
-          </div>
+      <div class="row">
+        <div *ngFor="let slatkis of slicedImages[currentPage-1]" class="col-md-4">
+          <img [src]="slatkis.slika" (click)="navigateToImage(slatkis)" class="card-img-top">
         </div>
-      
-        <nav aria-label="Page navigation">
-          <ul class="pagination">
-            <li class="page-item" *ngFor="let page of pages">
-              <a class="page-link" (click)="setCurrentPage(page)">{{ page }}</a>
-            </li>
-          </ul>
-        </nav>
       </div>
+
+      <div class="pagination">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Prethodna strana</button> <&nbsp;>
+        <span>Strana {{ currentPage }} od {{ totalPages }}</span> <&nbsp;>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Sledeća strana</button>
+      </div>
+    </div>
 
 </body>

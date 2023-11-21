@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Slatkis } from '../models/slatkis';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-kolaci',
@@ -8,38 +9,46 @@ import { Slatkis } from '../models/slatkis';
 })
 export class KolaciComponent {
 
-  constructor() {
+  constructor(private router:Router) {
     this.kolaci=JSON.parse(localStorage.getItem("kolaci"));
-    for(let kolac of this.kolaci){
-      this.images.push(kolac.slika);
-    }
-    this.paginateImages();
-  }
 
-  kolaci:Slatkis[];
-  images=[];
-  itemsPerRow = 3;
-  itemsPerPage = this.itemsPerRow;
-  currentPage = 1;
-  paginatedImages: any[] = [];
-  pages: number[] = [];
-
-  paginateImages(): void {
-    const numberOfPages = Math.ceil(this.kolaci.length / this.itemsPerPage);
-    this.pages = Array.from({ length: numberOfPages }, (_, index) => index + 1);
-
-    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-    const endIndex = startIndex + this.itemsPerPage;
-    const slicedImages = this.kolaci.slice(startIndex, endIndex);
-
-    this.paginatedImages = [];
-    for (let i = 0; i < slicedImages.length; i += this.itemsPerRow) {
-      this.paginatedImages.push(slicedImages.slice(i, i + this.itemsPerRow));
+    let cur=0;
+    while(cur < this.kolaci.length){
+      let arr=[];
+      for(let i = 0; i < 3; i++){
+        if(i + cur < this.kolaci.length){
+          arr.push(this.kolaci[i+cur]);
+        }
+      }
+      this.slicedImages.push(arr);
+      cur+=3;
     }
   }
 
-  setCurrentPage(page: number): void {
-    this.currentPage = page;
-    this.paginateImages();
+  slicedImages:any[][] = [];
+  kolaci: Slatkis[] = [];
+  itemsPerPage: number = 3;
+  currentPage: number = 1;
+
+  navigateToImage(slatkis:any){
+    localStorage.setItem("odabraniSlatkis",JSON.stringify(slatkis));
+    this.router.navigate(['main/kolaci/odabraniSlatkis']);
   }
+
+  get totalPages(): number {
+    return Math.ceil(this.kolaci.length / this.itemsPerPage);
+  }
+
+  nextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
+  }
+
+  prevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
 }

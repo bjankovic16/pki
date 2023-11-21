@@ -10,6 +10,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { InfoComponent } from './info/info.component';
 import { KolaciComponent } from './kolaci/kolaci.component';
+import { OdabraniSlatkisComponent } from './odabrani-slatkis/odabrani-slatkis.component';
+import { KomentariComponent } from './komentari/komentari.component';
+import { PorudzbineComponent } from './porudzbine/porudzbine.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { KolaciComponent } from './kolaci/kolaci.component';
     RegistrationComponent,
     MainPageComponent,
     InfoComponent,
-    KolaciComponent
+    KolaciComponent,
+    OdabraniSlatkisComponent,
+    KomentariComponent,
+    PorudzbineComponent
   ],
   imports: [
     BrowserModule,

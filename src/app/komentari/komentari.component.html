@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Island Moments">
+</head>
+<body>
+    <div>
+        <p>Slatki zalogaj</p>
+    </div>
+    <div class="container">
+        <h2>{{odabraniSlatkis.naziv}}</h2>
+        <h3>Komentari:</h3>
+        <br/>
+        <div *ngFor="let komentar of odabraniSlatkis.komentari" class="styled-text">
+            {{komentar}}
+        </div>
+    </div>
+    <div class="button-container">
+        <textarea *ngIf="isVisible" class="input-text" rows="5" placeholder="Enter your message" [(ngModel)]="komentar"></textarea>
+        <button (click)="dodajKomentar()" *ngIf="isVisible" style="margin-right: 10px;"> Komentariši </button>
+        <button (click)="komentarisi()" *ngIf="isVisible"> Poništi </button> 
+        <button (click)="komentarisi()" *ngIf="!isVisible"> Dodaj komentar </button>
+    </div>
+    
+</body>

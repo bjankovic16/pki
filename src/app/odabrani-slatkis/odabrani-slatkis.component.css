@@ -1,0 +1,75 @@
+body {
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+p{
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+    font-family: Island Moments;
+    font-size: 100px;
+    height: 40px;
+}
+
+.container {
+    display: flex;
+}
+  
+.side-by-side1 {
+    flex: 1;   
+    display: flex;
+    justify-content: right;
+    margin-right: 40px;
+}
+
+img {
+    width: 600px;
+    height: 600px;
+}
+
+.side-by-side2 {
+    flex: 1;
+}
+
+.inside2{
+    padding: 5px;
+    background-color: #FFF;
+    margin-left: 40px;
+    width: 600px;
+    height: 450px;
+}
+
+.styled-text {
+    text-align: left;
+    color: black;
+    font-family: Island Moments;
+    font-size: 40px;
+    margin-left: 10px;
+    object-fit: contain;
+}
+
+button {
+    background-color: #602112;
+    width: 260px;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Island Moments;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.buttons2 {
+    margin-top: 40px;
+    margin-left: 70px;
+}
