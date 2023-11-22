@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Island Moments">
+</head>
+<body>
+    <div>
+        <p>Slatki zalogaj</p>
+    </div>
+    <div>
+        <h4>Porudžbina broj: {{korisnik.trenutnaPorudzbina.broj}}</h4>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let naruceni of korisnik.trenutnaPorudzbina.naruceniSlatkisi" class="col-md-4">
+                <div class="content">
+                    <img src={{naruceni.slatkis.slika}}>
+                    <img class="vector" src="../../assets/minus.png">
+                    <img class="vector" src="../../assets/plus.png">
+                     {{naruceni.slatkis.naziv}}
+                     {{naruceni.slatkis.cena}}
+                     {{naruceni.kolicina}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-page">
+        <h3>Cena ukupno {{korisnik.trenutnaPorudzbina.cena}} din</h3>
+        <button (click)="naruci()"> Naruči </button>
+    </div>
+
+</body>

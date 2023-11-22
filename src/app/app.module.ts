@@ -13,6 +13,7 @@ import { KolaciComponent } from './kolaci/kolaci.component';
 import { OdabraniSlatkisComponent } from './odabrani-slatkis/odabrani-slatkis.component';
 import { KomentariComponent } from './komentari/komentari.component';
 import { PorudzbineComponent } from './porudzbine/porudzbine.component';
+import { NarucivanjeComponent } from './narucivanje/narucivanje.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PorudzbineComponent } from './porudzbine/porudzbine.component';
     KolaciComponent,
     OdabraniSlatkisComponent,
     KomentariComponent,
-    PorudzbineComponent
+    PorudzbineComponent,
+    NarucivanjeComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@ export class OdabraniSlatkisComponent {
   odabraniSlatkis:Slatkis;
 
   naruci(){
-    
+    this.router.navigate(['/main/kolaci/odabraniSlatkis/narucivanje'])
   } 
 
   komentarisi(){

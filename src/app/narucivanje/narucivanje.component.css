@@ -1,0 +1,98 @@
+body {
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+p{
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+    font-family: Island Moments;
+    font-size: 100px;
+    height: 40px;
+}
+
+h4 {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 200;
+    margin-top: 12px;
+    margin-left: 400px;
+    height: 40px;
+}
+
+h3 {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 200;
+    margin-top: 12px;
+    height: 40px;
+}
+
+.container {
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 500px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-4 {
+    flex:calc(50%);
+    display: flex;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+.content {
+    background-color: #602112;
+    width: 540px;
+    height: 200px;
+    border-radius: 5%;
+    margin-bottom: 40px;
+    text-align: left;
+    padding: 10px;
+}
+
+.bottom-page {
+    text-align: center;
+}
+
+button {
+    margin-top: -15px;
+    background-color: #602112;
+    width: 260px;
+    height: 60px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.vector {
+    width: 30px;
+    height: 30px;
+}

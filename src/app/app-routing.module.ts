@@ -9,6 +9,7 @@ import { KolaciComponent } from './kolaci/kolaci.component';
 import { OdabraniSlatkisComponent } from './odabrani-slatkis/odabrani-slatkis.component';
 import { KomentariComponent } from './komentari/komentari.component';
 import { PorudzbineComponent } from './porudzbine/porudzbine.component';
+import { NarucivanjeComponent } from './narucivanje/narucivanje.component';
 
 const routes: Routes = [
   {path:"", component:IndexComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:"main/kolaci/odabraniSlatkis", component:OdabraniSlatkisComponent},
   {path:"main/kolaci/odabraniSlatkis/komentari", component:KomentariComponent},
   {path:"main/orders", component:PorudzbineComponent},
+  {path:"main/kolaci/odabraniSlatkis/narucivanje", component:NarucivanjeComponent},
 ];
 
 @NgModule({
