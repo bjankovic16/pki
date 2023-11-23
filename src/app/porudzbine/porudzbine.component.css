@@ -61,12 +61,13 @@ h4 {
 }
 
 .scroll-container{
+    margin-top: 20px;
     max-width: 1000px; 
     margin-left: auto;
     margin-right: auto;
     overflow-y: auto; 
     overflow-x: hidden;
-    max-height: 600px;
+    height: 500px;
 }
 
 h3 {

@@ -14,18 +14,27 @@
             <div *ngFor="let naruceni of korisnik.trenutnaPorudzbina.naruceniSlatkisi" class="col-md-4">
                 <div class="content">
                     <img src={{naruceni.slatkis.slika}}>
-                    <img class="vector" src="../../assets/minus.png">
-                    <img class="vector" src="../../assets/plus.png">
-                     {{naruceni.slatkis.naziv}}
-                     {{naruceni.slatkis.cena}}
-                     {{naruceni.kolicina}}
+                    <div>
+                        <div class="text-inside">
+                            {{naruceni.slatkis.naziv}}       
+                        </div>
+                        <div class="images-inside">
+                            <img class="vector" src="../../assets/minus.png" (click)="handleMinusClick(naruceni)">
+                            <input type="text" value="{{naruceni.kolicina}}" disabled>
+                            <img class="vector2" src="../../assets/plus.png" (click)="handlePlusClick(naruceni)">
+                            <img class="vector2" src="../../assets/delete.png" (click)="handleDeleteClick(naruceni)">
+                        </div>
+                        <div class="text-inside">
+                            Cena: {{naruceni.slatkis.cena}} 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="bottom-page">
-        <h3>Cena ukupno {{korisnik.trenutnaPorudzbina.cena}} din</h3>
+        <h3>Cena ukupno: {{korisnik.trenutnaPorudzbina.cena}} din</h3>
         <button (click)="naruci()"> Naruči </button>
     </div>
 

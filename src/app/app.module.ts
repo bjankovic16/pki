@@ -14,6 +14,7 @@ import { OdabraniSlatkisComponent } from './odabrani-slatkis/odabrani-slatkis.co
 import { KomentariComponent } from './komentari/komentari.component';
 import { PorudzbineComponent } from './porudzbine/porudzbine.component';
 import { NarucivanjeComponent } from './narucivanje/narucivanje.component';
+import { WorkerComponent } from './worker/worker.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NarucivanjeComponent } from './narucivanje/narucivanje.component';
     OdabraniSlatkisComponent,
     KomentariComponent,
     PorudzbineComponent,
-    NarucivanjeComponent
+    NarucivanjeComponent,
+    WorkerComponent
   ],
   imports: [
     BrowserModule,

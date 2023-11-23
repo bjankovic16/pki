@@ -21,7 +21,7 @@ h4 {
     font-style: normal;
     font-weight: 200;
     margin-top: 12px;
-    margin-left: 400px;
+    margin-left: 380px;
     height: 40px;
 }
 
@@ -68,6 +68,7 @@ img {
     margin-bottom: 40px;
     text-align: left;
     padding: 10px;
+    display: flex;
 }
 
 .bottom-page {
@@ -94,5 +95,50 @@ button {
 
 .vector {
     width: 30px;
+    height: 28px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.vector2 {
+    width: 30px;
+    height: 28px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.text-inside {
+    width: 100%;
+    text-decoration: none;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 38px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 200;
+    padding-left: 12px;
+}
+
+.images-inside {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    height: 40px;
+}
+
+input {
     height: 30px;
+    border-radius: 5%;
+    text-align: center;
+    font-size: 15px;
+}
+
+input:disabled {
+    background-color: #602112;
+    color: #FFF;
 }
