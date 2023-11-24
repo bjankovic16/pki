@@ -18,6 +18,16 @@ export class LoginComponent {
     korisnik.telefon="036/555/333";
     korisnik.korisnickoIme="a";
     korisnik.lozinka="a";
+
+    let prodavac = new Korisnik();
+    prodavac.ime="Mika";
+    prodavac.prezime="Mikic";
+    prodavac.adresa="Beogradska bb";
+    prodavac.telefon="036/555/333";
+    prodavac.korisnickoIme="b";
+    prodavac.lozinka="b";
+    prodavac.jeKupac=false;    
+
     let p=new Porudzbina();
     p.broj=1;
     p.cena=2000;
@@ -36,6 +46,7 @@ export class LoginComponent {
       korisnici=[];
     }
     korisnici.push(korisnik);
+    korisnici.push(prodavac);
     localStorage.setItem("korisnici",JSON.stringify(korisnici));
   }
 
@@ -46,8 +57,12 @@ export class LoginComponent {
     let korisnici=JSON.parse(localStorage.getItem("korisnici"));
     for(const korisnik of korisnici){
       if(korisnik.korisnickoIme==this.korisnickoIme && korisnik.lozinka==this.lozinka){
-        localStorage.setItem("prijavljen",JSON.stringify(korisnik));
-        this.router.navigate(['main'])
+        if(korisnik.jeKupac){
+          localStorage.setItem("prijavljen",JSON.stringify(korisnik));
+          this.router.navigate(['main'])  
+        } else{
+          this.router.navigate(['prodavac']);
+        }
       }
     }
   }

@@ -4,6 +4,7 @@ import { Slatkis } from '../models/slatkis';
 import { Porudzbina } from '../models/porudzbina';
 import { naruceniSlatkis } from '../models/naruceniSlatkis';
 import { Router } from '@angular/router';
+import { Kasa } from '../models/kasa';
 
 @Component({
   selector: 'app-narucivanje',
@@ -41,6 +42,17 @@ export class NarucivanjeComponent {
 	naruci(){
 		this.korisnik.porudzbine.push(this.korisnik.trenutnaPorudzbina);
 		this.korisnik.trenutnaPorudzbina.status=0;
+		
+		let kasa = JSON.parse(localStorage.getItem("kasa"));
+		if(kasa == null){
+			kasa=[];
+		}
+		let k = new Kasa();
+		k.kupac = this.korisnik;
+		k.porudzbina = this.korisnik.trenutnaPorudzbina;
+		kasa.push(k);
+		localStorage.setItem("kasa",JSON.stringify(kasa));
+
 		this.korisnik.trenutnaPorudzbina=new Porudzbina();
 		this.promeniLocalStorage();
 		this.router.navigate(['main/kolaci/odabraniSlatkis']);

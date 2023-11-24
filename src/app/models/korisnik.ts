@@ -7,6 +7,7 @@ export class Korisnik{
     telefon:string;
     korisnickoIme:string;
     lozinka:string;
+    jeKupac:boolean=true;
     porudzbine:Porudzbina[]=[];
     trenutnaPorudzbina:Porudzbina=new Porudzbina();
 }

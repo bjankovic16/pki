@@ -1,0 +1,157 @@
+body {
+    background-image: url('../../assets/background.jpg');
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 60px;
+    display: flex;
+}
+
+.first-div {
+    width: 50%;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    height: 800px;
+}
+
+.second-div {
+    width: 50%;
+    background-color: #602112;
+    width: 700px;
+    height: 970px;
+    margin-left: 60px;
+    border-radius: 10px;
+}
+
+.inner-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #602112;
+    border-radius: 15px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 400px;
+}
+
+.text-inner {
+    margin-left: 40px;
+}
+
+.images {
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: right;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+p {
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+    font-family: Island Moments;
+    font-size: 40px;
+    height: 20px;
+}
+
+h3 {
+    text-align: center;
+    color: #FFF;
+    margin-top: 15px;
+    font-family: Island Moments;
+    font-size: 60px;
+    height: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 600px;
+    font-family: Island Moments;
+    font-size: 30px;
+}
+
+textarea {
+    padding: 10px;
+    margin: 5px;
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Island Moments;
+    font-size: 30px;
+}
+
+.center {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.addition {
+    height: 200px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    margin-left: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 200px;
+    font-family: Island Moments;
+    font-size: 30px;
+}
+
+.input-picture {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+.flex-btn-image {
+    display: flex;
+}
+
+.first-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.second-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+input[type="submit"]{
+    margin-top: 20px;
+    background-color: #602112;
+    width: 260px;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 60px;
+    text-align: center;
+}

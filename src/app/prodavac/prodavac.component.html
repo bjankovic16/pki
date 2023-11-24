@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Island Moments">
+</head>
+<body>
+    <div class="container">
+        <div class="first-div">
+            <div class="inner-div" *ngFor="let k of kasa">
+                <div class="text-inner">
+                    <p>Korisinčko ime: {{k.kupac.korisnickoIme}}</p>
+                    <p>Porudžbina broj: {{k.porudzbina.broj}}</p>
+                    <p>Cena: {{k.porudzbina.cena}}</p>
+                </div>
+                <div class="images">
+                    <img src="../../assets/green.png">
+                    <img src="../../assets/red.png">            
+                </div>
+            </div>
+        </div>
+        <div class="second-div">
+            <h3>Dodavanje proizvoda</h3>
+            <div class="center">
+                <input type="text" placeholder="Naziv proizvoda" [(ngModel)]="naziv">
+            </div>
+            <div class="center">
+                <textarea rows="3" placeholder="Opis proizvoda" class="addition" [(ngModel)]="opis"></textarea>
+            </div>
+            <div class="center">
+                <textarea rows="3" placeholder="Sastojci" [(ngModel)]="sastojci"></textarea>
+            </div>
+            <div class="center">
+                <input type="text" placeholder="Cena" [(ngModel)]="cena">
+            </div>
+            <div class="flex-btn-image">
+                <div class="first-item">
+                    <button>Dodaj sliku</button>    
+                </div>
+                <div class="second-item">
+                    <img src="" class="input-picture">        
+                </div>
+            </div>
+            <div class="center">
+                <input type="submit" class="submit-button" value="Dodaj proizvod">    
+            </div>
+        </div>
+    </div>
+</body>
