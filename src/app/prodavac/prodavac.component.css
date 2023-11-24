@@ -115,16 +115,17 @@ button {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 200px;
+    width: 250px;
     font-family: Island Moments;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .input-picture {
     margin-top: 10px;
-    margin-left: 100px;
-    width: 200px;
-    height: 200px;
+    margin-left: 60px;
+    width: 180px;
+    height: 180px;
 }
 
 .flex-btn-image {
@@ -144,7 +145,7 @@ button {
 }
 
 input[type="submit"]{
-    margin-top: 20px;
+    margin-top: 30px;
     background-color: #602112;
     width: 260px;
     color: #FFF;
