@@ -11,6 +11,7 @@ import { KomentariComponent } from './komentari/komentari.component';
 import { PorudzbineComponent } from './porudzbine/porudzbine.component';
 import { NarucivanjeComponent } from './narucivanje/narucivanje.component';
 import { ProdavacComponent } from './prodavac/prodavac.component';
+import { PromenaComponent } from './promena/promena.component';
 
 const routes: Routes = [
   {path:"", component:IndexComponent},
@@ -25,6 +26,8 @@ const routes: Routes = [
   {path:"main/orders", component:PorudzbineComponent},
   {path:"main/kolaci/odabraniSlatkis/narucivanje", component:NarucivanjeComponent},
   {path:"prodavac", component:ProdavacComponent},
+  {path:"main/change", component:PromenaComponent},
+  {path:"prodavac/change", component:PromenaComponent}
 ];
 
 @NgModule({

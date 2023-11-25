@@ -10,6 +10,7 @@ export class PorudzbineComponent {
   
   constructor(){
     this.korisnik=JSON.parse(localStorage.getItem("prijavljen"));
+    console.log(this.korisnik);
   }
 
   korisnik:Korisnik;

@@ -1,0 +1,195 @@
+body {
+    background-image: url('../../assets/background.jpg');
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container {
+    height: 100px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.text {
+    background-color: transparent;
+    height: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 0;
+    box-sizing: border-box; 
+    width: 51%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+}
+
+.text1 {
+    background-color: transparent;
+    height: 40px;
+    width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 1;
+    box-sizing: border-box; 
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+}
+
+.text2 {
+    background-color: transparent;
+    height: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 0;
+    box-sizing: border-box; 
+    width: 75%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+}
+
+.centered-one{
+    display: flex;
+}
+
+.center-button{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.center{
+    margin-top: -50px;
+}
+
+h2{
+    flex-grow: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+    padding-right: 20px;
+}
+
+p{
+    flex-grow: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Island Moments;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+    padding-right: 20px;
+}
+
+button{
+    background-color: #602112;
+    width: 250px;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Island Moments;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.333px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.dialog {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 150px;
+    text-align: center;
+}
+
+.dialog h2 {
+    color: #333;
+}
+
+.dialog p {
+    color: #666;
+}
+
+.dialog button {
+    background-color: #602112;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: Island Moments;
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}

@@ -8,9 +8,8 @@
     <div class="nav-bar">
         <h4>Promocija nedelje:</h4>
         <div class="image-links">
-            <a><img src="../../assets/account.png"></a>   
+            <a routerLink="change"><img src="../../assets/account.png"></a>   
             <a routerLink="orders"><img src="../../assets/ring.png"></a>
-            <img src="../../assets/cart.png">
             <a routerLink="about"><img src="../../assets/help.png"></a>
         </div>
     </div>
@@ -20,7 +19,7 @@
         <img src={{image3}}>
     </div>
     <div class="image-container1">
-        <img src="../../assets/torte.png">
-        <a routerLink="kolaci"><img src="../../assets/kolaci.png"></a>
-    </div>
+        <img src="../../assets/torte.png" (click)="navigate('torte')">
+        <img src="../../assets/kolaci.png" (click)="navigate('kolaci')">
+    </div> 
 </body>

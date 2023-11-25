@@ -16,7 +16,7 @@ body {
 
 .first-div {
     width: 50%;
-    overflow-y: auto; 
+    overflow-y: auto;
     overflow-x: hidden;
     height: 800px;
 }
@@ -108,10 +108,10 @@ textarea {
     height: 200px;
 }
 
-button {
+.button {
     padding: 10px;
     margin: 5px;
-    margin-left: 100px;
+    margin-top: 30px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -130,12 +130,18 @@ button {
 
 .flex-btn-image {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.first-item {
+.item-radio {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+    font-family: Island Moments;
+    font-size: 40px;
+    color: #FFF;
 }
 
 .second-item {
@@ -144,7 +150,7 @@ button {
     align-items: center;
 }
 
-input[type="submit"]{
+.submit-button {
     margin-top: 30px;
     background-color: #602112;
     width: 260px;
@@ -155,4 +161,60 @@ input[type="submit"]{
     border-radius: 20px;
     height: 60px;
     text-align: center;
+}
+
+.size-radio {
+    width: 18px;
+    height: 18px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.dialog {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 150px;
+    text-align: center;
+}
+
+.dialog h2 {
+    color: #333;
+}
+
+.dialog p {
+    color: #666;
+}
+
+.dialog button {
+    background-color: #602112;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 40px;
+    font-family: Island Moments;
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
 }

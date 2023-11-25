@@ -5,5 +5,6 @@ export class Slatkis{
     sastojci:string;
     cena:number;
     slika:string;
+    tip:string;
     komentari:string[]=[];
 }

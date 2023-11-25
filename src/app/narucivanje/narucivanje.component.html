@@ -5,14 +5,17 @@
     <div>
         <p>Slatki zalogaj</p>
     </div>
-    <div>
+    <div *ngIf="korisnik.trenutnaPorudzbina.naruceniSlatkisi.length>0">
         <h4>Porudžbina broj: {{korisnik.trenutnaPorudzbina.broj}}</h4>
     </div>
 
     <div class="container">
         <div class="row">
+            <div *ngIf="korisnik.trenutnaPorudzbina.naruceniSlatkisi.length==0">
+                <h4>Nema ničega u korpi</h4>
+            </div>
             <div *ngFor="let naruceni of korisnik.trenutnaPorudzbina.naruceniSlatkisi" class="col-md-4">
-                <div class="content">
+                <div class="content" *ngIf="korisnik.trenutnaPorudzbina.naruceniSlatkisi.length>0">
                     <img src={{naruceni.slatkis.slika}}>
                     <div>
                         <div class="text-inside">
@@ -33,7 +36,7 @@
         </div>
     </div>
 
-    <div class="bottom-page">
+    <div class="bottom-page" *ngIf="korisnik.trenutnaPorudzbina.naruceniSlatkisi.length>0">
         <h3>Cena ukupno: {{korisnik.trenutnaPorudzbina.cena}} din</h3>
         <button (click)="naruci()"> Naruči </button>
     </div>

@@ -10,8 +10,22 @@ import { Router } from '@angular/router';
 export class KolaciComponent {
 
   constructor(private router:Router) {
-    this.kolaci=JSON.parse(localStorage.getItem("kolaci"));
+    this.kolaci=JSON.parse(localStorage.getItem(JSON.parse(localStorage.getItem("prikaz"))));
 
+    this.pushIntoArray();
+  }
+
+  slicedImages:any[][] = [];
+  kolaci: Slatkis[] = [];
+  itemsPerPage: number = 3;
+  currentPage: number = 1;
+
+  navigateToImage(slatkis:any){
+    localStorage.setItem("odabraniSlatkis",JSON.stringify(slatkis));
+    this.router.navigate(['main/kolaci/odabraniSlatkis']);
+  }
+
+  pushIntoArray(){
     let cur=0;
     while(cur < this.kolaci.length){
       let arr=[];
@@ -23,16 +37,6 @@ export class KolaciComponent {
       this.slicedImages.push(arr);
       cur+=3;
     }
-  }
-
-  slicedImages:any[][] = [];
-  kolaci: Slatkis[] = [];
-  itemsPerPage: number = 3;
-  currentPage: number = 1;
-
-  navigateToImage(slatkis:any){
-    localStorage.setItem("odabraniSlatkis",JSON.stringify(slatkis));
-    this.router.navigate(['main/kolaci/odabraniSlatkis']);
   }
 
   get totalPages(): number {

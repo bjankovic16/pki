@@ -15,6 +15,7 @@ import { KomentariComponent } from './komentari/komentari.component';
 import { PorudzbineComponent } from './porudzbine/porudzbine.component';
 import { NarucivanjeComponent } from './narucivanje/narucivanje.component';
 import { ProdavacComponent } from './prodavac/prodavac.component';
+import { PromenaComponent } from './promena/promena.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProdavacComponent } from './prodavac/prodavac.component';
     KomentariComponent,
     PorudzbineComponent,
     NarucivanjeComponent,
-    ProdavacComponent
+    ProdavacComponent,
+    PromenaComponent
   ],
   imports: [
     BrowserModule,

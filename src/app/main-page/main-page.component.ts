@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { TimerService } from '../services/timer';
 import { Slatkis } from '../models/slatkis';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -10,9 +11,7 @@ import { Slatkis } from '../models/slatkis';
 
 export class MainPageComponent implements OnInit, OnDestroy {
   
-  constructor(private timerService: TimerService) {
-    //creating local storage za torte i kolace
-    //localStorage.clear();
+  constructor(private timerService: TimerService,private router:Router) {
     let palacinkeVocne=new Slatkis();
     palacinkeVocne.naziv="Palačinke sa voćnim prelivom";
     palacinkeVocne.opis="Palačinke sa voćnim prelivom savršeni izbor za sve ljubitelje palačinki."
@@ -46,6 +45,7 @@ export class MainPageComponent implements OnInit, OnDestroy {
     kolaci.push(palacinkeMedodjija);
     kolaci.push(palacinkeKing);
     localStorage.setItem("kolaci",JSON.stringify(kolaci));
+    localStorage.setItem("torte",JSON.stringify([]))
   }
   
   image1:string="../../assets/promocija1.png";
@@ -65,5 +65,10 @@ export class MainPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.timerService.stopTimer();
+  }
+
+  navigate(tip:string){
+    this.router.navigate(["main/kolaci"]);
+    localStorage.setItem("prikaz",JSON.stringify(tip));
   }
 }

@@ -18,7 +18,7 @@ export class NarucivanjeComponent {
 		this.slatkis=JSON.parse(localStorage.getItem("odabraniSlatkis"));
 		
 		if(this.korisnik.trenutnaPorudzbina.status==-2){
-			this.korisnik.trenutnaPorudzbina.broj=this.korisnik.porudzbine.length;
+			this.korisnik.trenutnaPorudzbina.broj=this.korisnik.porudzbine.length+1;
 			this.korisnik.trenutnaPorudzbina.status=-1;
 		}
 
@@ -29,19 +29,34 @@ export class NarucivanjeComponent {
 		this.korisnik.trenutnaPorudzbina.naruceniSlatkisi.push(naruceniSl);
 		
 		this.korisnik.trenutnaPorudzbina.cena += naruceniSl.slatkis.cena;
-		this.promeniLocalStorage();
+		this.promeniPrijavljenStorage();
 	}
 
 	korisnik:Korisnik;
 	slatkis:Slatkis;
 
-	promeniLocalStorage(){
+	promeniPrijavljenStorage(){
 		localStorage.setItem("prijavljen",JSON.stringify(this.korisnik));
 	}
 
+	promeniLocalStorage(){
+		localStorage.setItem("prijavljen",JSON.stringify(this.korisnik));
+		let korisnici:Korisnik[]=JSON.parse(localStorage.getItem("korisnici"));
+		let index;
+		for(let i=0; i<korisnici.length; i++){
+		  if(korisnici[i].korisnickoIme==this.korisnik.korisnickoIme){
+			index=i;
+			break;
+		  }
+		}
+		korisnici[index]=this.korisnik;
+		localStorage.setItem("korisnici",JSON.stringify(korisnici));
+		console.log(korisnici);
+	}
+
 	naruci(){
-		this.korisnik.porudzbine.push(this.korisnik.trenutnaPorudzbina);
 		this.korisnik.trenutnaPorudzbina.status=0;
+		this.korisnik.porudzbine.push(this.korisnik.trenutnaPorudzbina);
 		
 		let kasa = JSON.parse(localStorage.getItem("kasa"));
 		if(kasa == null){
@@ -55,7 +70,6 @@ export class NarucivanjeComponent {
 
 		this.korisnik.trenutnaPorudzbina=new Porudzbina();
 		this.promeniLocalStorage();
-		this.router.navigate(['main/kolaci/odabraniSlatkis']);
 	}
 
 	handlePlusClick(naruceni:naruceniSlatkis){
@@ -79,8 +93,5 @@ export class NarucivanjeComponent {
 			this.korisnik.trenutnaPorudzbina.naruceniSlatkisi[i].index--;
 		}
 		this.promeniLocalStorage();
-		if(this.korisnik.trenutnaPorudzbina.cena == 0){
-			this.router.navigate(['main/kolaci/odabraniSlatkis']);
-		}
 	}
 }

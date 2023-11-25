@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Island Moments">
 </head>
+
 <body>
     <div class="container">
         <div class="first-div">
@@ -11,36 +12,56 @@
                     <p>Cena: {{k.porudzbina.cena}}</p>
                 </div>
                 <div class="images">
-                    <img src="../../assets/green.png">
-                    <img src="../../assets/red.png">            
+                    <img src="../../assets/green.png" (click)="odobravanje(k)">
+                    <img src="../../assets/red.png" (click)="odbijanje(k)">
                 </div>
             </div>
         </div>
         <div class="second-div">
             <h3>Dodavanje proizvoda</h3>
             <div class="center">
-                <input type="text" placeholder="Naziv proizvoda" [(ngModel)]="naziv">
+                <input type="text" placeholder="Naziv proizvoda" [(ngModel)]="naziv" required>
             </div>
             <div class="center">
-                <textarea rows="3" placeholder="Opis proizvoda" class="addition" [(ngModel)]="opis"></textarea>
+                <textarea rows="3" placeholder="Opis proizvoda" class="addition" [(ngModel)]="opis" required></textarea>
             </div>
             <div class="center">
-                <textarea rows="3" placeholder="Sastojci" [(ngModel)]="sastojci"></textarea>
+                <textarea rows="3" placeholder="Sastojci" [(ngModel)]="sastojci" required></textarea>
             </div>
             <div class="center">
                 <input type="text" placeholder="Cena" [(ngModel)]="cena">
             </div>
             <div class="flex-btn-image">
-                <div class="first-item">
-                    <button>Dodaj sliku</button>    
+                <div>
+                    <div class="center">
+                        <button class="button" (click)="openFileInput()">Dodaj sliku</button>
+                        <input type="file" #fileInput style="display: none" (change)="onFileSelected(fileInput)" />
+                    </div>
+                    <div class="item-radio">
+                        <input [(ngModel)]="tip" type="radio" value="kolac" checked id="kolac" class="size-radio">
+                        <label for="kolac">Kolač</label> &nbsp;&nbsp;
+                        <input [(ngModel)]="tip" type="radio" value="torta" id="torta" class="size-radio">
+                        <label for="torta">Torta</label>
+                    </div>
                 </div>
                 <div class="second-item">
-                    <img src="" class="input-picture">        
+                    <img src={{slikaNema}} class="input-picture">
                 </div>
             </div>
             <div class="center">
-                <input type="submit" class="submit-button" value="Dodaj proizvod">    
+                <button class="submit-button" (click)="dodajProizvod()">Dodaj proizvod</button>
             </div>
         </div>
     </div>
+    <div class="overlay" id="dialogOverlay">
+        <div class="dialog">
+            <div>
+                <p>{{tekstPoruke}}</p>
+            </div>
+            <div>
+                <button (click)="closeDialog()">Close</button>
+            </div>
+        </div>
+    </div>
+    
 </body>
