@@ -71,4 +71,10 @@ export class MainPageComponent implements OnInit, OnDestroy {
     this.router.navigate(["main/kolaci"]);
     localStorage.setItem("prikaz",JSON.stringify(tip));
   }
+
+  narucivanje(){
+    localStorage.setItem("odabraniSlatkis",JSON.stringify(null));
+    this.router.navigate(["main/narucivanje"]);
+  }
+
 }

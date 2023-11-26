@@ -26,7 +26,13 @@ export class LoginComponent {
         } else{
           this.router.navigate(['prodavac']);
         }
+      }else{
+        document.getElementById('dialogOverlay').classList.add('active');
       }
     }
+  }
+
+  closeDialog() {
+    document.getElementById('dialogOverlay').classList.remove('active');
   }
 }

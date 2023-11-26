@@ -25,6 +25,7 @@ const routes: Routes = [
   {path:"main/kolaci/odabraniSlatkis/komentari", component:KomentariComponent},
   {path:"main/orders", component:PorudzbineComponent},
   {path:"main/kolaci/odabraniSlatkis/narucivanje", component:NarucivanjeComponent},
+  {path:"main/narucivanje", component:NarucivanjeComponent},
   {path:"prodavac", component:ProdavacComponent},
   {path:"main/change", component:PromenaComponent},
   {path:"prodavac/change", component:PromenaComponent}

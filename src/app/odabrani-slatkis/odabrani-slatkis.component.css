@@ -1,10 +1,15 @@
 body {
     background-image: url('../../assets/background.jpg');
+    margin: 0;
+    padding: 0;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    overflow: auto;
 }
 
-p{
+p {
     text-align: center;
     color: #FFF;
     margin-top: 15px;
@@ -16,9 +21,9 @@ p{
 .container {
     display: flex;
 }
-  
+
 .side-by-side1 {
-    flex: 1;   
+    flex: 1;
     display: flex;
     justify-content: right;
     margin-right: 40px;
@@ -33,7 +38,7 @@ img {
     flex: 1;
 }
 
-.inside2{
+.inside2 {
     padding: 5px;
     background-color: #FFF;
     margin-left: 40px;
@@ -72,4 +77,28 @@ button {
 .buttons2 {
     margin-top: 40px;
     margin-left: 70px;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+    .side-by-side1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .side-by-side2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .inside2 {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .buttons2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 }

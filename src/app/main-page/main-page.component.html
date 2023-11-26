@@ -9,6 +9,7 @@
         <h4>Promocija nedelje:</h4>
         <div class="image-links">
             <a routerLink="change"><img src="../../assets/account.png"></a>   
+            <a><img src="../../assets/cart.png" (click)="narucivanje()" class="pointer"></a> 
             <a routerLink="orders"><img src="../../assets/ring.png"></a>
             <a routerLink="about"><img src="../../assets/help.png"></a>
         </div>
@@ -19,7 +20,7 @@
         <img src={{image3}}>
     </div>
     <div class="image-container1">
-        <img src="../../assets/torte.png" (click)="navigate('torte')">
-        <img src="../../assets/kolaci.png" (click)="navigate('kolaci')">
+        <img src="../../assets/torte.png" (click)="navigate('torte')" class="pointer"> 
+        <img src="../../assets/kolaci.png" (click)="navigate('kolaci')" class="pointer">
     </div> 
 </body>

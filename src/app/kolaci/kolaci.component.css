@@ -1,7 +1,12 @@
 body {
     background-image: url('../../assets/background.jpg');
+    margin: 0;
+    padding: 0;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    overflow: auto;
 }
 
 p{
@@ -87,4 +92,10 @@ span {
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.333px;
+}
+
+@media (max-width: 1150px) {
+    .row{
+        flex-direction: column;
+    }
 }

@@ -49,6 +49,7 @@ export class ProdavacComponent implements AfterViewInit{
   dodajProizvod(){
     if(this.naziv!=null && this.opis!=null && this.sastojci!=null && this.slika!=null && this.tip!=null){
       this.tekstPoruke="Proizvod je u poslastičarnici";
+      //dodavanje proizvoda dodati kada se budu unosili svi podaci
     }else{
       this.tekstPoruke="Nisu uneti svi podaci";
     }

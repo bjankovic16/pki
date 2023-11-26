@@ -1,7 +1,12 @@
 body {
     background-image: url('../../assets/background.jpg');
+    margin: 0;
+    padding: 0;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
+    overflow: auto;
 }
 
 p{
@@ -21,7 +26,8 @@ h4 {
     font-style: normal;
     font-weight: 200;
     margin-top: 12px;
-    margin-left: 380px;
+    margin-left: 80px;
+    text-align: left;
     height: 40px;
 }
 

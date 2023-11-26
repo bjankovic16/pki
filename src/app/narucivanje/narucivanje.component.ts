@@ -16,20 +16,21 @@ export class NarucivanjeComponent {
 	constructor(private router:Router){
 		this.korisnik=JSON.parse(localStorage.getItem("prijavljen"));
 		this.slatkis=JSON.parse(localStorage.getItem("odabraniSlatkis"));
-		
-		if(this.korisnik.trenutnaPorudzbina.status==-2){
-			this.korisnik.trenutnaPorudzbina.broj=this.korisnik.porudzbine.length+1;
-			this.korisnik.trenutnaPorudzbina.status=-1;
-		}
+		if(this.slatkis!=null){
+			if(this.korisnik.trenutnaPorudzbina.status==-2){
+				this.korisnik.trenutnaPorudzbina.broj=this.korisnik.porudzbine.length+1;
+				this.korisnik.trenutnaPorudzbina.status=-1;
+			}
 
-		let naruceniSl=new naruceniSlatkis();
-		naruceniSl.kolicina=1;
-		naruceniSl.index=this.korisnik.trenutnaPorudzbina.naruceniSlatkisi.length;
-		naruceniSl.slatkis=this.slatkis;
-		this.korisnik.trenutnaPorudzbina.naruceniSlatkisi.push(naruceniSl);
-		
-		this.korisnik.trenutnaPorudzbina.cena += naruceniSl.slatkis.cena;
-		this.promeniPrijavljenStorage();
+			let naruceniSl=new naruceniSlatkis();
+			naruceniSl.kolicina=1;
+			naruceniSl.index=this.korisnik.trenutnaPorudzbina.naruceniSlatkisi.length;
+			naruceniSl.slatkis=this.slatkis;
+			this.korisnik.trenutnaPorudzbina.naruceniSlatkisi.push(naruceniSl);
+			
+			this.korisnik.trenutnaPorudzbina.cena += naruceniSl.slatkis.cena;
+			this.promeniPrijavljenStorage();
+		}
 	}
 
 	korisnik:Korisnik;

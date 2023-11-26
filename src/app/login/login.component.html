@@ -19,4 +19,14 @@
             <a routerLink="registration" class="link">Nemate nalog kliknite ovde...</a>
         </div>
     </form>
+    <div class="overlay" id="dialogOverlay">
+        <div class="dialog">
+            <div>
+                <h5>Nisu uneti ispravni podaci!</h5>
+            </div>
+            <div>
+                <button (click)="closeDialog()">Zatvori</button>
+            </div>
+        </div>
+    </div>
 </body>

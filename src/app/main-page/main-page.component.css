@@ -2,11 +2,11 @@ body {
     background-image: url('../../assets/background.jpg');
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    overflow: auto;
 }
 
 p{
@@ -38,9 +38,9 @@ h4{
 }
   
 .image-container img {
-    width: 30%;
+    width: 28%;
     height: 250px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .image-links {
@@ -73,4 +73,46 @@ h4{
     margin-top: -70px;
     justify-content: space-between;
     width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+    .image-container{
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-container img {
+        height: 250px;
+        width: 400px;
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .nav-bar {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .image-container1 img {
+        width: 200px;
+        height: 250px;
+        margin-right: 40px;
+        margin-top: 40px;
+    }
+    h4{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-links {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
