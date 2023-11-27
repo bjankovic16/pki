@@ -21,7 +21,7 @@ p{
 .container-info{
     margin-left: auto;
     margin-right: auto;
-    background-color: #602112;
+    background-color: #3E1911;
     width: 480px;
     height: 280px;
     border-radius: 10%;
@@ -53,7 +53,7 @@ h4 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    background-color: #602112;
+    background-color: #3E1911;
     width: 380px;
     height: 150px;
     border-radius: 5%;

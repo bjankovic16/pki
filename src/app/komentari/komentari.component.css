@@ -78,9 +78,10 @@ button {
 
 .input-text{
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
     height: 80px;
-    width: 1300px;
+    width: 1395px;
     font-size: 40px;
     font-family: Island Moments;
     vertical-align: bottom;

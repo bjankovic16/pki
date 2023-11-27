@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="button-container">
-        <textarea *ngIf="isVisible" class="input-text" rows="5" placeholder="Enter your message" [(ngModel)]="komentar"></textarea>
+        <textarea *ngIf="isVisible" class="input-text" rows="5" placeholder="Unesite vaš komentar ovde" [(ngModel)]="komentar"></textarea>
         <button (click)="dodajKomentar()" *ngIf="isVisible" style="margin-right: 10px;"> Komentariši </button>
         <button (click)="komentarisi()" *ngIf="isVisible"> Poništi </button> 
         <button (click)="komentarisi()" *ngIf="!isVisible"> Dodaj komentar </button>

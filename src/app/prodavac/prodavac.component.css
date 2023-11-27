@@ -24,7 +24,7 @@ body {
 
 .second-div {
     width: 50%;
-    background-color: #602112;
+    background-color: #3E1911;
     width: 700px;
     height: 970px;
     margin-left: 60px;
@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    background-color: #602112;
+    background-color: #3E1911;
     border-radius: 15px;
     width: 550px;
     margin-left: auto;

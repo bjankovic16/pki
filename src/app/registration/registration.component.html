@@ -33,4 +33,17 @@
             <button type="submit" name="Potvrda" value="Potvrda">Potvrda</button>
         </div>
     </form>
+    <div class="overlay" id="dialogOverlay">
+        <div class="dialog">
+            <div *ngIf="flagPrikaz==true">
+                <p>{{tekstPoruke}}</p>
+            </div>
+            <div *ngIf="flagPrikaz==false" class="dialog-div">
+                <p>{{tekstPoruke}}</p>
+            </div>
+            <div>
+                <button (click)="closeDialog()">Zatvori</button>
+            </div>
+        </div>
+    </div>
 </body>

@@ -16,6 +16,7 @@ import { PromenaComponent } from './promena/promena.component';
 const routes: Routes = [
   {path:"", component:IndexComponent},
   {path:"registration", component:RegistrationComponent},
+  {path:"registration/login", component:LoginComponent},
   {path:"login", component:LoginComponent},
   {path:"login/registration", component:RegistrationComponent},
   {path:"main", component:MainPageComponent},
