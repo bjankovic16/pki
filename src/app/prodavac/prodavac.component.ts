@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Kasa } from '../models/kasa';
 import { Korisnik } from '../models/korisnik';
+import { Slatkis } from '../models/slatkis';
 
 @Component({
   selector: 'app-prodavac',
@@ -10,6 +11,9 @@ import { Korisnik } from '../models/korisnik';
 export class ProdavacComponent implements AfterViewInit{
   constructor(){
     this.kasa = JSON.parse(localStorage.getItem("kasa"));
+    if(this.kasa==null){
+      this.kasa=[];
+    }
   }
 
   kasa:Kasa[]=[];
@@ -47,9 +51,19 @@ export class ProdavacComponent implements AfterViewInit{
   }
 
   dodajProizvod(){
-    if(this.naziv!=null && this.opis!=null && this.sastojci!=null && this.slika!=null && this.tip!=null){
+    if(this.naziv!=null && this.opis!=null && this.sastojci!=null && this.slika!=null && this.tip!=null && this.cena!=null){
+      let slatkis=new Slatkis();
+      slatkis.naziv=this.naziv;
+      slatkis.opis=this.opis;
+      slatkis.sastojci=this.sastojci;
+      slatkis.slika=this.slikaNema;
+      slatkis.tip=this.tip;
+      slatkis.cena=this.cena;
+      let proizvodi = JSON.parse(localStorage.getItem(this.tip));
+      proizvodi.push(slatkis);
+      localStorage.setItem(this.tip, JSON.stringify(proizvodi));
       this.tekstPoruke="Proizvod je u poslastičarnici";
-      //dodavanje proizvoda dodati kada se budu unosili svi podaci
+
     }else{
       this.tekstPoruke="Nisu uneti svi podaci";
     }

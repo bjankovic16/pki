@@ -26,7 +26,7 @@ body {
     width: 50%;
     background-color: #3E1911;
     width: 700px;
-    height: 970px;
+    height: 800px;
     margin-left: 60px;
     border-radius: 10px;
 }
@@ -72,10 +72,21 @@ p {
 h3 {
     text-align: center;
     color: #FFF;
-    margin-top: 15px;
+    margin-top: 10px;
     font-family: Island Moments;
-    font-size: 60px;
-    height: 20px;
+    font-size: 50px;
+    height: 10px;
+}
+
+h5 {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 200;
+    height: 40px;
+    text-align: center;
 }
 
 input[type="text"] {
@@ -106,7 +117,7 @@ textarea {
 }
 
 .addition {
-    height: 200px;
+    height: 150px;
 }
 
 .button {
@@ -152,7 +163,7 @@ textarea {
 }
 
 .submit-button {
-    margin-top: 30px;
+    margin-top: 15px;
     background-color: #602112;
     width: 260px;
     color: #FFF;
@@ -212,7 +223,7 @@ textarea {
     font-family: Island Moments;
     width: 100px;
     height: 50px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .overlay.active {

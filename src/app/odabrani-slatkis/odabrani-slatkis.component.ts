@@ -11,6 +11,7 @@ export class OdabraniSlatkisComponent {
 
   constructor(private router:Router){
     this.odabraniSlatkis = JSON.parse(localStorage.getItem("odabraniSlatkis"));
+    console.log(this.odabraniSlatkis)
   }
 
   odabraniSlatkis:Slatkis;

@@ -5,7 +5,7 @@
     <div>
         <p>Slatki zalogaj</p>
     </div>
-    <div class="container-info">
+    <div class="container-info" *ngIf="korisnik.porudzbine.length > 0">
         <div class="inside-info">
             <img class="inside-info-image">
             <img  src="../../assets/red.png">
@@ -20,7 +20,7 @@
             <h4>Porudžbina na čekanju</h4>
         </div>
     </div>
-    <div class="scroll-container">
+    <div class="scroll-container" *ngIf="korisnik.porudzbine.length > 0">
         <div class="order-info" *ngFor="let order of korisnik.porudzbine">
             <div>
                 <div class="up">
@@ -36,6 +36,11 @@
                 <img *ngIf="order.status==2" src="../../assets/red.png">
             </div>
         </div>
+    </div>
+    <div *ngIf="korisnik.porudzbine.length == 0">
+        <h5>
+            Trenutno nema porudžbina.
+        </h5>
     </div>
 
 </body>

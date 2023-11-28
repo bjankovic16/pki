@@ -6,7 +6,7 @@
     <div class="container">
         <div class="first-div">
             <div class="inner-div" *ngFor="let k of kasa">
-                <div class="text-inner">
+                <div class="text-inner" *ngIf="kasa.length>0">
                     <p>Korisinčko ime: {{k.kupac.korisnickoIme}}</p>
                     <p>Porudžbina broj: {{k.porudzbina.broj}}</p>
                     <p>Cena: {{k.porudzbina.cena}} din</p>
@@ -16,6 +16,9 @@
                     <img src="../../assets/red.png" (click)="odbijanje(k)">
                 </div>
             </div>
+            <div *ngIf="kasa.length==0">
+                <h5>Trenutno nema porudžbina!</h5>
+            </div>
         </div>
         <div class="second-div">
             <h3>Dodavanje proizvoda</h3>
@@ -23,10 +26,10 @@
                 <input type="text" placeholder="Naziv proizvoda" [(ngModel)]="naziv" required>
             </div>
             <div class="center">
-                <textarea rows="3" placeholder="Opis proizvoda" class="addition" [(ngModel)]="opis" required></textarea>
+                <textarea rows="2" placeholder="Opis proizvoda" class="addition" [(ngModel)]="opis" required></textarea>
             </div>
             <div class="center">
-                <textarea rows="3" placeholder="Sastojci" [(ngModel)]="sastojci" required></textarea>
+                <textarea rows="1" placeholder="Sastojci" [(ngModel)]="sastojci" required></textarea>
             </div>
             <div class="center">
                 <input type="text" placeholder="Cena" [(ngModel)]="cena">
@@ -59,7 +62,7 @@
                 <p>{{tekstPoruke}}</p>
             </div>
             <div>
-                <button (click)="closeDialog()">Close</button>
+                <button (click)="closeDialog()">Zatvori</button>
             </div>
         </div>
     </div>

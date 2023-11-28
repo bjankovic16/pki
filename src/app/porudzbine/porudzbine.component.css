@@ -18,6 +18,15 @@ p{
     height: 30px;
 }
 
+h5 {
+    text-align: center;
+    color: #FFF;
+    font-family: Island Moments;
+    font-size: 60px;
+    height: 30px;
+    margin-top: 170px;
+}
+
 .container-info{
     margin-left: auto;
     margin-right: auto;

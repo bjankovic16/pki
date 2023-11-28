@@ -1,5 +1,4 @@
 export class Slatkis{
-    id:number
     naziv:string;
     opis:string;
     sastojci:string;
