@@ -100,6 +100,17 @@ input[type="text"] {
     font-size: 30px;
 }
 
+input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 600px;
+    font-family: Island Moments;
+    font-size: 30px;
+}
+
 textarea {
     padding: 10px;
     margin: 5px;
